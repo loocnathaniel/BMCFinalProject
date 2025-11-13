@@ -1,28 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:ecommerce_app/screens/auth_wrapper.dart';
-import 'package:ecommerce_app/providers/cart_provider.dart';
-import 'package:provider/provider.dart';
+import 'firebase_options.dart'; // Generated automatically by FlutterFire CLI
 
-
-void main() async{
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+    options: DefaultFirebaseOptions.currentPlatform, // 🔥 required for web, android, ios
   );
 
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => CartProvider(),
-      child: const MyApp(),
-    ),
-  );
-
-  FlutterNativeSplash.remove();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
