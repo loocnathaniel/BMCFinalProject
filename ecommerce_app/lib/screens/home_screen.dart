@@ -7,7 +7,8 @@ import 'package:ecommerce_app/screens/product_detail_screen.dart';
 import 'package:ecommerce_app/providers/cart_provider.dart';
 import 'package:ecommerce_app/screens/cart_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:ecommerce_app/screens/order_history_screen.dart';
+
+import '../providers/dart/cart_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -75,19 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
           ),
-
-          IconButton(
-            icon: const Icon(Icons.receipt_long),
-            tooltip: 'My Orders',
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const OrderHistoryScreen(),
-                ),
-              );
-            },
-          ),
-
 
           if (_userRole == 'admin')
             IconButton(

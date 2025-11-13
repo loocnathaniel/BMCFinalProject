@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
       print(e);
     }
 
-    if (mounted) {
+    if (mounted) { // Check if the widget is still on screen
       setState(() {
         _isLoading = false;
       });

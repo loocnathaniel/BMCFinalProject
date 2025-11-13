@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_app/providers/cart_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../providers/dart/cart_provider.dart';
+
 class ProductDetailScreen extends StatelessWidget {
   final String productId;
   final Map<String, dynamic> productData;

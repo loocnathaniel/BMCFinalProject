@@ -20,10 +20,10 @@ class AuthWrapper extends StatelessWidget {
         }
 
         if (snapshot.hasData) {
-          return const HomeScreen();
+          return const HomeScreen(); // Show the home screen
         }
 
-        return const LoginScreen();
+        return const LoginScreen(); // Show the login screen
       },
     );
   }
